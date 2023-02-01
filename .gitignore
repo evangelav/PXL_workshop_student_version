@@ -20,3 +20,6 @@ $RECYCLE.BIN/
 .vscode/
 .history/
 *.code-workspace
+
+#requirements.txt
+requirements.txt
