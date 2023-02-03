@@ -41,18 +41,8 @@ We will create a virtual environment, that will allow us to install **Django** i
     b) Linux or OS X : ```source nameofvenv/bin/activate```
 
 ### Installing Django
-With the virtual environment activated you can now install Django
-1) Go to the root folder of your project and create a new file named _requirements.txt_ 
-2) In the file write the line : ```Django~=3.2.10``` 
-> we give the version of Django that we are going to use in the project
-3) Once that is done, go back to the open terminal and run : <br />
-    a) Windows : ```python -m pip install -r requirements.txt``` <br />
-    b) Linux or OS X : ```pip install -r requirements.txt```
-
-## Running the project
-With all those installations and configurations complete you can run the project : ```python manage.py runserver``` and that will start the project on the port 8000 by default <br />
-You can access through : http://localhost:8000/ <br />
-> if you want the project to run on a different port run the command : ```python manage.py runserver PORT``` _replacing PORT by the port you want for example python manage.py runserver 9090_
+With the virtual environment activated you can now install Django with the following command : ```pip install django ``` <br />
+You will also need to install Django Rest Framework with the following command : ```pip install djangorestframework``` <br />
 
 ### Setting up the database
 #### Activating the database
@@ -73,4 +63,7 @@ Once this information is entered you can run the project again, go to http://loc
 **In this console you can than add elements by clicking the button _+Add_ highlighted in the picture below.**
 <img width="482" alt="image" src="https://user-images.githubusercontent.com/22933040/216307249-274447f8-f04f-4083-b2a9-62d1b3dbe7e1.png">
 
-
+## Running the project
+With all those installations and configurations complete you can run the project : ```python manage.py runserver``` and that will start the project on the port 8000 by default <br />
+You can access through : http://localhost:8000/ <br />
+> if you want the project to run on a different port run the command : ```python manage.py runserver PORT``` _replacing PORT by the port you want for example python manage.py runserver 9090_
