@@ -1,12 +1,16 @@
-FROM python
+FROM python:3.9.1
 
 WORKDIR /PXL_workshop_student_version
 
-RUN pip install --upgrade pip && pip install django && pip install djangorestframework
+RUN pip install --upgrade pip 
 
 COPY . /PXL_workshop_student_version/
 
-EXPOSE 8000
+RUN pip install -r requirements.txt
 
-#CMD ["python", "manage.py", "runserver", "localhost:8000"]
-CMD python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000
+EXPOSE 8080
+
+RUN python manage.py makemigrations
+RUN python manage.py migrate
+
+CMD python manage.py runserver 0.0.0.0:8000
